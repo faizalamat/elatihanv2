@@ -1,0 +1,14 @@
+ <tr style="display: none" id="Row1">
+                <td align="right" bgcolor="#CCCCCC">Unit <span class="text8">*</span> :</td>
+                <td align="left"><select name="bahagian" id="bahagian">
+                  <?php
+					$sa = "SELECT * FROM bahagian WHERE bdelete = 1 ORDER BY bahagian ASC";
+					$da = mysql_query($sa);
+					while ($ta = mysql_fetch_array($da)) {
+						?>
+                      <option value="<?php echo $ta['bids']; ?>"><?php echo $ta['bahagian']; ?></option>
+                  <?php
+					}
+					?>
+                </select></td>
+              </tr>
